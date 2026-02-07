@@ -1,0 +1,26 @@
+public class Solution {
+    public bool CanAliceWin(int[] nums) {
+        int sumdouble = 0;
+        int sumsingle = 0;
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i].ToString().Length > 1)
+            {
+                sumdouble += nums[i];
+            }
+            else
+            {
+                sumsingle += nums[i];
+            }
+        }
+
+        if (sumdouble > sumsingle || sumdouble < sumsingle)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
